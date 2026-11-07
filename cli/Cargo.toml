@@ -1,0 +1,27 @@
+[package]
+name = "garage-compta-cli"
+version = "0.1.0"
+edition = "2021"
+authors = ["Garage Compta"]
+description = "CLI for Garage Compta"
+
+[dependencies]
+# Workspace dependencies
+uuid = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+rust_decimal = { workspace = true }
+thiserror = { workspace = true }
+
+# Core module
+garage-compta-core = { path = "../core" }
+garage-compta-data = { path = "../data" }
+
+# CLI
+clap = { workspace = true }
+
+# Async
+tokio = { workspace = true }
+
+[dev-dependencies]

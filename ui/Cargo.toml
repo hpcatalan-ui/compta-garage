@@ -1,0 +1,25 @@
+[package]
+name = "garage-compta-ui"
+version = "0.1.0"
+edition = "2021"
+authors = ["Garage Compta"]
+description = "Web UI for Garage Compta"
+
+[dependencies]
+# Workspace dependencies
+uuid = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+rust_decimal = { workspace = true }
+
+# Core module
+garage-compta-core = { path = "../core" }
+garage-compta-data = { path = "../data" }
+
+# Web framework
+leptos = { workspace = true }
+leptos_router = { workspace = true }
+leptos_meta = { workspace = true }
+
+[dev-dependencies]

@@ -1,0 +1,28 @@
+[package]
+name = "garage-compta-data"
+version = "0.1.0"
+edition = "2021"
+authors = ["Garage Compta"]
+description = "Data access layer for Garage Compta"
+
+[dependencies]
+# Workspace dependencies
+uuid = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+rust_decimal = { workspace = true }
+thiserror = { workspace = true }
+
+# Database
+sqlx = { workspace = true, features = ["rust_decimal"] }
+refinery = { workspace = true }
+
+# Async
+tokio = { workspace = true }
+
+# Core module
+garage-compta-core = { path = "../core" }
+
+[dev-dependencies]
+tokio = { version = "1.0", features = ["full"] }

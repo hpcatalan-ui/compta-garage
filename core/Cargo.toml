@@ -1,0 +1,21 @@
+[package]
+name = "garage-compta-core"
+version = "0.1.0"
+edition = "2021"
+authors = ["Garage Compta"]
+description = "Core business logic for Garage Compta"
+
+[dependencies]
+# Workspace dependencies
+uuid = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+rust_decimal = { workspace = true }
+thiserror = { workspace = true }
+csv = { workspace = true }
+
+# Database
+sqlx = { workspace = true, features = ["rust_decimal"] }
+
+[dev-dependencies]

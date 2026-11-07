@@ -1,0 +1,51 @@
+[package]
+name = "garage-compta-api"
+version = "0.1.0"
+edition = "2021"
+authors = ["Garage Compta"]
+description = "API REST for Garage Compta"
+
+[dependencies]
+# Workspace dependencies
+uuid = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+rust_decimal = { workspace = true }
+thiserror = { workspace = true }
+
+# Database
+garage-compta-data = { path = "../data" }
+garage-compta-core = { path = "../core" }
+
+# Web framework
+axum = { workspace = true }
+tokio = { workspace = true }
+tower = { workspace = true }
+tower-http = { workspace = true }
+
+# Logging
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+# CLI
+clap = { workspace = true }
+
+# Async
+async-trait = { workspace = true }
+
+# JWT
+jsonwebtoken = "9.0"
+
+# Validator
+validator = { version = "0.21", features = ["derive"] }
+
+# HTTP
+hyper = "1.0"
+hyper-util = { version = "0.1", features = ["tokio"] }
+
+[[bin]]
+name = "garage-compta-api"
+path = "src/main.rs"
+
+[dev-dependencies]
